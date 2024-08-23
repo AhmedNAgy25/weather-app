@@ -1,0 +1,197 @@
+/* global prop */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #06283d;
+  --second-color:#06283d85;
+  --main-font-weight: 500;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+}
+/* card container */
+.container {
+  position: relative;
+  width: 400px;
+  height: 105px;
+  padding: 28px 32px;
+  overflow: hidden;
+  border-radius: 18px;
+  font-family: "Roboto", sans-serif;
+  transition: 0.56s ease-in-out;
+  background: linear-gradient(135deg, rgb(100 219 142) 30%, rgb(114, 72, 160) 100%);
+}
+/* search box */
+.search-box {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.5px var(--second-color) solid;
+  border-radius: 4rem;
+  padding: 4px 7px 4px 12px;
+  box-shadow: 2px 5px 11px 3px #06283d14;
+  background-color: #fff;
+}
+
+.search-box input {
+  color: var(--main-color);
+  width: 80%;
+  font-size: 24px;
+  font-weight: var(--main-font-weight);
+  text-transform: uppercase;
+  padding-left: 32px;
+}
+
+.search-box input::placeholder {
+  font-size: 20px;
+  font-weight: var(--main-font-weight);
+  color: var(--main-color);
+  text-transform: capitalize;
+}
+
+.search-box button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  color: var(--main-color);
+  background: #dff6ff;
+  border-radius: 50%;
+  font-size: 22px;
+  transition: 0.4s ease;
+  border: 0.5px var(--second-color) solid;
+}
+
+.search-box button:hover {
+  color: #fff;
+  background: var(--main-color);
+  border: #dff6ff solid .5px;
+}
+
+.search-box i {
+  position: absolute;
+  color: var(--main-color);
+  font-size: 28px;
+}
+
+.search-box i:hover {
+  transform: translateY(-10px);
+}
+
+.search-box i,
+.search-box i:hover {
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+/* weather-box */
+.weather-box {
+  text-align: center;
+}
+
+.weather-box img {
+  width: 60%;
+  margin-top: 20px;
+}
+
+.weather-box .temperature {
+  color: var(--main-color);
+  font-size: 4rem;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
+.weather-box .temperature span {
+  font-size: 1.5rem;
+}
+
+.weather-box .description {
+  color: var(--main-color);
+  font-size: 22px;
+  font-weight: var(--main-font-weight);
+  text-transform: capitalize;
+  margin-left: 1ch;
+}
+/* weather details */
+.weather-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.weather-details .humidity,
+.weather-details .wind {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 45%;
+}
+
+.weather-details .humidity i,
+.weather-details .wind i {
+  color: var(--main-color);
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.weather-details span {
+  color: var(--main-color);
+  font-size: 22px;
+  font-weight: var(--main-font-weight);
+}
+
+.weather-details p {
+  color: var(--main-color);
+  font-size: 14px;
+  font-weight: var(--main-font-weight);
+}
+
+.not-found {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  transform: scale(0);
+  opacity: 0;
+  display: none;
+}
+
+.not-found img {
+  width: 70%;
+}
+
+.not-found p {
+  color: var(--main-color);
+  font-size: 22px;
+  font-weight: var(--main-font-weight);
+  margin-top: 12px;
+}
+/* weather appearance */
+.weather-box,
+.weather-details {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.fadeIn {
+  animation: 0.5s fadeIn forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
