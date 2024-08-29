@@ -1,4 +1,4 @@
-/* global prop */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +9,10 @@
 
 :root {
   --main-color: #06283d;
-  --second-color:#06283d85;
+  --second-color: #06283d85;
   --main-font-weight: 500;
+  --bg-color: #dff6ff;
+  --font-size-large: 22px;
 }
 
 body {
@@ -19,40 +21,45 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--main-color);
+  font-family: "Roboto", sans-serif;
 }
-/* card container */
+
+/* Card Container */
 .container {
   position: relative;
   width: 400px;
   height: 105px;
   padding: 28px 32px;
-  overflow: hidden;
   border-radius: 18px;
-  font-family: "Roboto", sans-serif;
+  overflow: hidden;
   transition: 0.56s ease-in-out;
-  background: linear-gradient(135deg, rgb(100 219 142) 30%, rgb(114, 72, 160) 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(100, 219, 142) 30%,
+    rgb(114, 72, 160) 100%
+  );
 }
-/* search box */
+
+/* Search Box */
 .search-box {
-  width: 100%;
-  height: min-content;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 0.5px var(--second-color) solid;
-  border-radius: 4rem;
+  width: 100%;
   padding: 4px 7px 4px 12px;
+  border: 0.5px solid var(--second-color);
+  border-radius: 4rem;
   box-shadow: 2px 5px 11px 3px #06283d14;
   background-color: #fff;
 }
 
 .search-box input {
-  color: var(--main-color);
   width: 80%;
+  padding-left: 32px;
   font-size: 24px;
   font-weight: var(--main-font-weight);
+  color: var(--main-color);
   text-transform: uppercase;
-  padding-left: 32px;
 }
 
 .search-box input::placeholder {
@@ -63,40 +70,35 @@ body {
 }
 
 .search-box button {
-  cursor: pointer;
   width: 50px;
   height: 50px;
-  color: var(--main-color);
-  background: #dff6ff;
+  font-size: var(--font-size-large);
+  cursor: pointer;
   border-radius: 50%;
-  font-size: 22px;
+  background: var(--bg-color);
+  color: var(--main-color);
+  border: 0.5px solid var(--second-color);
   transition: 0.4s ease;
-  border: 0.5px var(--second-color) solid;
 }
 
 .search-box button:hover {
   color: #fff;
   background: var(--main-color);
-  border: #dff6ff solid .5px;
+  border-color: var(--bg-color);
 }
 
 .search-box i {
   position: absolute;
-  color: var(--main-color);
   font-size: 28px;
+  color: var(--main-color);
+  transition: transform 0.5s ease-out 0.2s;
 }
 
 .search-box i:hover {
   transform: translateY(-10px);
 }
 
-.search-box i,
-.search-box i:hover {
-  transition-delay: 0.2s;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
-}
-/* weather-box */
+/* Weather Box */
 .weather-box {
   text-align: center;
 }
@@ -107,10 +109,10 @@ body {
 }
 
 .weather-box .temperature {
-  color: var(--main-color);
+  margin-top: 20px;
   font-size: 4rem;
   font-weight: 800;
-  margin-top: 20px;
+  color: var(--main-color);
 }
 
 .weather-box .temperature span {
@@ -118,13 +120,14 @@ body {
 }
 
 .weather-box .description {
-  color: var(--main-color);
-  font-size: 22px;
-  font-weight: var(--main-font-weight);
-  text-transform: capitalize;
   margin-left: 1ch;
+  font-size: var(--font-size-large);
+  font-weight: var(--main-font-weight);
+  color: var(--main-color);
+  text-transform: capitalize;
 }
-/* weather details */
+
+/* Weather Details */
 .weather-details {
   display: flex;
   justify-content: space-between;
@@ -141,23 +144,24 @@ body {
 
 .weather-details .humidity i,
 .weather-details .wind i {
-  color: var(--main-color);
-  font-size: 40px;
   margin-bottom: 10px;
+  font-size: 40px;
+  color: var(--main-color);
 }
 
 .weather-details span {
-  color: var(--main-color);
-  font-size: 22px;
+  font-size: var(--font-size-large);
   font-weight: var(--main-font-weight);
+  color: var(--main-color);
 }
 
 .weather-details p {
-  color: var(--main-color);
   font-size: 14px;
   font-weight: var(--main-font-weight);
+  color: var(--main-color);
 }
 
+/* Not Found */
 .not-found {
   width: 100%;
   text-align: center;
@@ -172,12 +176,13 @@ body {
 }
 
 .not-found p {
-  color: var(--main-color);
-  font-size: 22px;
-  font-weight: var(--main-font-weight);
   margin-top: 12px;
+  font-size: var(--font-size-large);
+  font-weight: var(--main-font-weight);
+  color: var(--main-color);
 }
-/* weather appearance */
+
+/* Animations */
 .weather-box,
 .weather-details {
   transform: scale(0);
@@ -185,8 +190,7 @@ body {
 }
 
 .fadeIn {
-  animation: 0.5s fadeIn forwards;
-  animation-delay: 0.5s;
+  animation: fadeIn 0.5s forwards 0.5s;
 }
 
 @keyframes fadeIn {
