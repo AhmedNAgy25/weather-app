@@ -1,12 +1,4 @@
 /* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: none;
-  box-sizing: border-box;
-}
-
 :root {
   --main-color: #06283d;
   --second-color: #06283d85;
@@ -14,7 +6,13 @@
   --bg-color: #dff6ff;
   --font-size-large: 22px;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
 body {
   height: 100vh;
   display: flex;
@@ -52,7 +50,6 @@ body {
   box-shadow: 2px 5px 11px 3px #06283d14;
   background-color: #fff;
 }
-
 .search-box input {
   width: 80%;
   padding-left: 32px;
@@ -61,14 +58,12 @@ body {
   color: var(--main-color);
   text-transform: uppercase;
 }
-
 .search-box input::placeholder {
   font-size: 20px;
   font-weight: var(--main-font-weight);
   color: var(--main-color);
   text-transform: capitalize;
 }
-
 .search-box button {
   width: 50px;
   height: 50px;
@@ -80,20 +75,17 @@ body {
   border: 0.5px solid var(--second-color);
   transition: 0.4s ease;
 }
-
 .search-box button:hover {
   color: #fff;
   background: var(--main-color);
   border-color: var(--bg-color);
 }
-
 .search-box i {
   position: absolute;
   font-size: 28px;
   color: var(--main-color);
   transition: transform 0.5s ease-out 0.2s;
 }
-
 .search-box i:hover {
   transform: translateY(-10px);
 }
@@ -102,23 +94,19 @@ body {
 .weather-box {
   text-align: center;
 }
-
 .weather-box img {
   width: 60%;
   margin-top: 20px;
 }
-
 .weather-box .temperature {
   margin-top: 20px;
   font-size: 4rem;
   font-weight: 800;
   color: var(--main-color);
 }
-
 .weather-box .temperature span {
   font-size: 1.5rem;
 }
-
 .weather-box .description {
   margin-left: 1ch;
   font-size: var(--font-size-large);
@@ -133,7 +121,6 @@ body {
   justify-content: space-between;
   margin-top: 30px;
 }
-
 .weather-details .humidity,
 .weather-details .wind {
   display: flex;
@@ -141,20 +128,17 @@ body {
   flex-direction: column;
   width: 45%;
 }
-
 .weather-details .humidity i,
 .weather-details .wind i {
   margin-bottom: 10px;
   font-size: 40px;
   color: var(--main-color);
 }
-
 .weather-details span {
   font-size: var(--font-size-large);
   font-weight: var(--main-font-weight);
   color: var(--main-color);
 }
-
 .weather-details p {
   font-size: 14px;
   font-weight: var(--main-font-weight);
@@ -170,11 +154,9 @@ body {
   opacity: 0;
   display: none;
 }
-
 .not-found img {
   width: 70%;
 }
-
 .not-found p {
   margin-top: 12px;
   font-size: var(--font-size-large);
@@ -192,7 +174,6 @@ body {
 .fadeIn {
   animation: fadeIn 0.5s forwards 0.5s;
 }
-
 @keyframes fadeIn {
   to {
     transform: scale(1);
